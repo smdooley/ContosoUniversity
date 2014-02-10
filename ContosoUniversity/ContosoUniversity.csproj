@@ -198,25 +198,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201401232202159_InitialCreate.cs" />
-    <Compile Include="Migrations\201401232202159_InitialCreate.Designer.cs">
-      <DependentUpon>201401232202159_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201402042111416_MaxLengthOnNames.cs" />
-    <Compile Include="Migrations\201402042111416_MaxLengthOnNames.Designer.cs">
-      <DependentUpon>201402042111416_MaxLengthOnNames.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201402042115402_ColumnFirstName.cs" />
-    <Compile Include="Migrations\201402042115402_ColumnFirstName.Designer.cs">
-      <DependentUpon>201402042115402_ColumnFirstName.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201402042131361_Chapter4.cs" />
-    <Compile Include="Migrations\201402042131361_Chapter4.Designer.cs">
-      <DependentUpon>201402042131361_Chapter4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201402052044100_AddedDepartmentRowVersion.cs" />
-    <Compile Include="Migrations\201402052044100_AddedDepartmentRowVersion.Designer.cs">
-      <DependentUpon>201402052044100_AddedDepartmentRowVersion.cs</DependentUpon>
+    <Compile Include="Migrations\201402102049349_Inheritance.cs" />
+    <Compile Include="Migrations\201402102049349_Inheritance.Designer.cs">
+      <DependentUpon>201402102049349_Inheritance.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
@@ -225,6 +209,7 @@
     <Compile Include="Models\Enrollment.cs" />
     <Compile Include="Models\Instructor.cs" />
     <Compile Include="Models\OfficeAssignment.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AssignedCourseData.cs" />
@@ -373,20 +358,8 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201401232202159_InitialCreate.resx">
-      <DependentUpon>201401232202159_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201402042111416_MaxLengthOnNames.resx">
-      <DependentUpon>201402042111416_MaxLengthOnNames.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201402042115402_ColumnFirstName.resx">
-      <DependentUpon>201402042115402_ColumnFirstName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201402042131361_Chapter4.resx">
-      <DependentUpon>201402042131361_Chapter4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201402052044100_AddedDepartmentRowVersion.resx">
-      <DependentUpon>201402052044100_AddedDepartmentRowVersion.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201402102049349_Inheritance.resx">
+      <DependentUpon>201402102049349_Inheritance.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

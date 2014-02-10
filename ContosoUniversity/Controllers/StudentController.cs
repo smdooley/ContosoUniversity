@@ -135,7 +135,7 @@ namespace ContosoUniversity.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(
-            [Bind(Include = "StudentID, LastName, FirstMidName, EnrollmentDate")]
+            [Bind(Include = "PersonID, LastName, FirstMidName, EnrollmentDate")]
             Student student)
         {
             try
@@ -185,7 +185,7 @@ namespace ContosoUniversity.Controllers
                 //db.Students.Remove(student);
 
                 //-- improves performance in a high-volume application
-                Student studentToDelete = new Student() { StudentID = id };
+                Student studentToDelete = new Student() { PersonID = id };
                 db.Entry(studentToDelete).State = EntityState.Deleted;
 
                 db.SaveChanges();

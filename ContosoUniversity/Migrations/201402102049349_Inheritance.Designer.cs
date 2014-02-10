@@ -5,13 +5,13 @@ namespace ContosoUniversity.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class Chapter4 : IMigrationMetadata
+    public sealed partial class Inheritance : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Chapter4));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Inheritance));
         
         string IMigrationMetadata.Id
         {
-            get { return "201402042131361_Chapter4"; }
+            get { return "201402102049349_Inheritance"; }
         }
         
         string IMigrationMetadata.Source

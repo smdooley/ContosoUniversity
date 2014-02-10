@@ -42,7 +42,7 @@ namespace ContosoUniversity.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.InstructorID = new SelectList(db.Instructors, "InstructorID", "FullName");
+            ViewBag.PersonID = new SelectList(db.Instructors, "PersonID", "FullName");
             return View();
         }
 
@@ -60,7 +60,7 @@ namespace ContosoUniversity.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.InstructorID = new SelectList(db.Instructors, "InstructorID", "FullName", department.InstructorID);
+            ViewBag.PersonID = new SelectList(db.Instructors, "PersonID", "FullName", department.PersonID);
             return View(department);
         }
 
@@ -74,7 +74,7 @@ namespace ContosoUniversity.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.InstructorID = new SelectList(db.Instructors, "InstructorID", "FullName", department.InstructorID);
+            ViewBag.PersonID = new SelectList(db.Instructors, "PersonID", "FullName", department.PersonID);
             return View(department);
         }
 
@@ -84,7 +84,7 @@ namespace ContosoUniversity.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(
-            [Bind(Include = "DepartmentID, Name, Budget, StartDate, RowVersion, InstructorID")]
+            [Bind(Include = "DepartmentID, Name, Budget, StartDate, RowVersion, PersonID")]
             Department department)
         {
             try
@@ -111,8 +111,8 @@ namespace ContosoUniversity.Controllers
                 if (databaseValues.StartDate != clientValues.StartDate)
                     ModelState.AddModelError("StartDate", "Current value: " + String.Format("{0:d}", databaseValues.StartDate));
                 
-                if (databaseValues.InstructorID != clientValues.InstructorID)
-                    ModelState.AddModelError("InstructorID", "Current value: " + db.Instructors.Find(databaseValues.InstructorID).FullName);
+                if (databaseValues.PersonID != clientValues.PersonID)
+                    ModelState.AddModelError("PersonID", "Current value: " + db.Instructors.Find(databaseValues.PersonID).FullName);
                 
                 ModelState.AddModelError(string.Empty, "The record you attempted to edit "
                     + "was modified by another user after you got the original value. The "
@@ -128,7 +128,7 @@ namespace ContosoUniversity.Controllers
                 ModelState.AddModelError(string.Empty, "Unable to save changes. Try again, and if the problem persists contact your system administrator.");
             }
 
-            ViewBag.InstructorID = new SelectList(db.Instructors, "InstructorID", "FullName", department.InstructorID);
+            ViewBag.PersonID = new SelectList(db.Instructors, "PersonID", "FullName", department.PersonID);
             return View(department);
         }
 

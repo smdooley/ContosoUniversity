@@ -16,6 +16,7 @@ namespace ContosoUniversity.DAL
         public DbSet<Instructor> Instructors { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<OfficeAssignment> OfficeAssignments { get; set; }
+        public DbSet<Person> People { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -24,8 +25,8 @@ namespace ContosoUniversity.DAL
             modelBuilder.Entity<Course>()
                 .HasMany(c => c.Instructors).WithMany(i => i.Courses)
                 .Map(t => t.MapLeftKey("CourseID")
-                    .MapRightKey("InstructorID")
-                    .ToTable("CourseInstructor"));
+                .MapRightKey("PersonID")
+                .ToTable("CourseInstructor"));
 
             //-- The following code provides an example of how you could have used fluent API 
             //-- instead of attributes to specify the relationship between the Instructor and OfficeAssignment entities
