@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ContosoUniversity.Application.DTOs;
+using ContosoUniversity.Application.Services.Interfaces;
 using System.Data;
-using System.Data.Entity;
-using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using ContosoUniversity.Application.DTOs;
-using ContosoUniversity.EntityFramework.Infrastructure;
-using ContosoUniversity.Application.Services;
 
 namespace ContosoUniversity.Web.Controllers
 {

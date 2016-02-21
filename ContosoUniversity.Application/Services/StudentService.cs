@@ -1,12 +1,9 @@
 ﻿using AutoMapper;
 using ContosoUniversity.Application.DTOs;
+using ContosoUniversity.Application.Services.Interfaces;
 using ContosoUniversity.Core.Models;
 using ContosoUniversity.Core.Repositories;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ContosoUniversity.Application.Services
 {

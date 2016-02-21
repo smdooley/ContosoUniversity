@@ -12,6 +12,8 @@ namespace ContosoUniversity.Web.App_Start
     using Ninject.Web.Common;
     using ContosoUniversity.Core.Repositories;
     using ContosoUniversity.EntityFramework.Repositories;
+    using ContosoUniversity.Application.Services.Interfaces;
+    using ContosoUniversity.Application.Services;
 
     public static class NinjectWebCommon 
     {
