@@ -10,7 +10,6 @@ namespace ContosoUniversity.Web.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
-    using ContosoUniversity.Application.Services;
     using ContosoUniversity.Core.Repositories;
     using ContosoUniversity.EntityFramework.Repositories;
 
@@ -68,6 +67,6 @@ namespace ContosoUniversity.Web.App_Start
             kernel.Bind<IStudentService>().To<StudentService>();
 
             kernel.Bind<IStudentRepository>().To<StudentRepository>();
-        }
+        }        
     }
 }
